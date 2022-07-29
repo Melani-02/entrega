@@ -1,0 +1,17 @@
+<div>
+    <h1>Lista Familiar</h1>
+    {% if listVoid %}
+        <h3>no hay ningun familiar en la lista</h3>
+    {% else %}
+        {% for item in family  %}
+            <div style="background-color: #f0adad;">
+                <h4>Full-name: {{item.full_name}}</h4>
+                <h4>Age: {{item.age}}</h4>
+                <h4>Genre: {{item.genre}}</h4>
+                <h4>Relative: {{item.relative}}</h4>
+                <h4>Added date: {{item.creation_date}}</h4>
+            </div>
+            <br><br>
+        {% endfor %}
+    {% endif %}
+</div> 

@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Proyecto1.views import saludo, hermana, hermano, mama, bienvenida  #importamos el modulo y el metodo
+from familia.views import add_relative, list_family
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
     path('hermano/', hermano),
     path('home/', bienvenida, name="bienvenida"),
+    path('familia/', list_family, name="Lista Familiar"),
+    path('add/', add_relative, name="add familiar"),
 ]
